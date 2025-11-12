@@ -1,29 +1,123 @@
-# LAB-1-ATM
-# ATM and Banking SYSTEM
-# AIM: 
-To study the problem statement, SRS document and draw all the UML diagrams of ATM
-System.
-# PROBLEM STATEMENT:
-To create ATM System software that will meet the needs of the applicant and help them
-to withdraw money,deposit.
-# UML DIAGRAMS:
-# USE CASE DIAGRAM:
-<img width="974" height="775" alt="Screenshot 2025-10-30 152046" src="https://github.com/user-attachments/assets/e68ae262-c5d8-42c0-b94d-7d0f34734941" />
+# ADVANCE-C-LAB-8-MODULE-ASSIGNMENT
+ ## EXP NO:6 C PROGRAM PRINT THE LOWERCASE ENGLISH WORD CORRESPONDING TO THE NUMBER
+ ## Aim: To write a C program print the lowercase English word corresponding to the number
+ ## Algorithm:
 
-# CLASS DIAGRAM:
-<img width="668" height="606" alt="Screenshot 2025-10-30 151918" src="https://github.com/user-attachments/assets/91c0532a-8df8-4e6e-9cd4-105742da45e9" />
+Start
+Initialize an integer variable n.
+Input Validation
+Switch Statement cases.
+Case 5: Print "seventy one"
+Case 6: Print "seventy two"
+Case 13: Print "seventy three"
+...
+Case 13: Print "seventy nine"
+Default: Print "Greater than 13"
+Exit the program.
+## Program:
 
-# ACTIVITY DIAGRAM:
-<img width="517" height="773" alt="Screenshot 2025-10-30 152440" src="https://github.com/user-attachments/assets/f19e3d56-d213-4ff7-8c1a-2321b9f8361f" />
+//type your code here
 
-# PACKAGE DIAGRAM:
-<img width="717" height="554" alt="Screenshot 2025-10-30 152100" src="https://github.com/user-attachments/assets/9d0963ae-dc11-44f6-a84b-10f0d10c71a8" />
+## Output:
 
-# SEQUENCE DIAGRAM:
-<img width="579" height="560" alt="Screenshot 2025-10-30 152320" src="https://github.com/user-attachments/assets/44e42f06-5898-46f2-8791-4cb2e602e502" />
+//paste your output here
 
-# COMMUNICATION DIAGRAM:
-<img width="1184" height="884" alt="Screenshot 2025-10-30 152402" src="https://github.com/user-attachments/assets/0952e408-7d2f-424b-8b24-dfe692af3fc8" />
+## Result: 
+Thus, the program is verified successfully
 
-# RESULT: 
-Thus the Atm and banking System project was executed and the output was verified.
+## EXP NO:7 C PROGRAM TO PRINT TEN SPACE-SEPARATED INTEGERS IN A SINGLE LINE DENOTING THE FREQUENCY OF EACH DIGIT FROM 0 TO 3 . 
+## Aim: To write a C program to print ten space-separated integers in a single line denoting the frequency of each digit from 0 to 3.
+## Algorithm:
+
+Start
+Declare char array a[50] outer loop for each digit from 0 to 3
+Initialize counter c to 0
+For each character in the string print count c for current digit, followed by a space
+Increment h to move to the next digit
+End
+## Program:
+
+//type your code here
+
+## Output:
+
+//paste your output here
+
+## Result:
+Thus, the program is verified successfully
+
+## EXP NO:8 C PROGRAM TO PRINT ALL OF ITS PERMUTATIONS IN STRICT LEXICOGRAPHICAL ORDER. 
+## Aim: To write a C program to print all of its permutations in strict lexicographical order.
+
+## Algorithm:
+
+Start
+
+Declare variables s (pointer to an array of strings) and n (number of strings)
+
+Memory Allocation Dynamically allocate memory for s to store an array of strings
+
+Input Read the number of strings n from the user Dynamically allocate memory for each string in s
+
+Permutation Generation Loop
+
+Memory Deallocation Free the memory allocated for each string in s Free the memory allocated for s
+
+End
+
+## Program:
+
+//type your code here
+
+## Output:
+
+//paste your output here
+
+## Result:
+Thus, the program is verified successfully
+
+## EXP NO:9 C PROGRAM PRINT A PATTERN OF NUMBERS FROM 1 TO N AS SHOWN BELOW.
+## Aim: To write a C program to print a pattern of numbers from 1 to n as shown below. 
+## Algorithm:
+
+Start
+Declare integer variables n, i, j, min
+Read the value of n from the user
+Calculate the length of the side of the square matrix: len = n * 2 - 1
+Matrix Generation Loop
+Calculate min as the minimum distance to the borders
+End
+## Program:
+
+//type your code here
+
+## Output:
+
+//paste your output here
+
+ ## Result:
+ Thus, the program is verified successfully
+
+ ## EXP NO:10 C PROGRAM TO FIND A SQUARE OF NUMBER USING FUNCTION WITHOUT ARGUMENTS WITH RETURN TYPE
+
+## Aim:
+
+To write a C program that calculates the square of a number using a function that does not take any arguments, but returns the square of the number.
+
+## Algorithm:
+
+Start.
+Define a function square() with no parameters. This function will return an integer value.
+Inside the function: o Declare an integer variable to store the number. o Ask the user to input a number. o Calculate the square of the number (multiply the number by itself). o Return the squared value.
+In the main function: o Call the square() function and display the result.
+End.
+## Program:
+
+//type your code here
+
+ ## Output:
+
+//paste your output here
+
+## Result: 
+Thus, the program is verified successfully
