@@ -15,12 +15,58 @@ Case 13: Print "seventy nine"
 Default: Print "Greater than 13"
 Exit the program.
 ## Program:
+```
+#include <stdio.h>
 
-//type your code here
+int main() {
+    int n;
+
+    // Step 1: Initialize and take input
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    // Step 2: Switch statement for mapping
+    switch(n) {
+        case 5:
+            printf("seventy one\n");
+            break;
+        case 6:
+            printf("seventy two\n");
+            break;
+        case 7:
+            printf("seventy three\n");
+            break;
+        case 8:
+            printf("seventy four\n");
+            break;
+        case 9:
+            printf("seventy five\n");
+            break;
+        case 10:
+            printf("seventy six\n");
+            break;
+        case 11:
+            printf("seventy seven\n");
+            break;
+        case 12:
+            printf("seventy eight\n");
+            break;
+        case 13:
+            printf("seventy nine\n");
+            break;
+        default:
+            printf("greater than 13\n");
+            break;
+    }
+
+    return 0;
+}
+
+```
 
 ## Output:
+<img width="439" height="196" alt="image" src="https://github.com/user-attachments/assets/b44d8388-55d8-4bf9-8b05-6213203e7e5b" />
 
-//paste your output here
 
 ## Result: 
 Thus, the program is verified successfully
@@ -37,11 +83,34 @@ Increment h to move to the next digit
 End
 ## Program:
 
-//type your code here
+```
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char a[50];
+    int i, h, c;
+
+    printf("Enter a string: ");
+    scanf("%s", a);
+
+    for (h = 0; h <= 9; h++) {  // loop for each digit 0–9
+        c = 0;
+        for (i = 0; i < strlen(a); i++) {
+            if (a[i] == (h + '0')) {  // check if character matches digit
+                c++;
+            }
+        }
+        printf("%d ", c);  // print frequency
+    }
+
+    return 0;
+}
+```
 
 ## Output:
+<img width="542" height="227" alt="image" src="https://github.com/user-attachments/assets/a3e69c78-22fd-4dc1-b36e-349b64fc2665" />
 
-//paste your output here
 
 ## Result:
 Thus, the program is verified successfully
@@ -66,12 +135,91 @@ Memory Deallocation Free the memory allocated for each string in s Free the memo
 End
 
 ## Program:
+```
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-//type your code here
+// Function to swap two characters
+void swap(char *x, char *y) {
+    char temp = *x;
+    *x = *y;
+    *y = temp;
+}
 
+// Function to sort a string in lexicographical order
+void sortString(char *str) {
+    int i, j, n = strlen(str);
+    for (i = 0; i < n - 1; i++) {
+        for (j = i + 1; j < n; j++) {
+            if (str[i] > str[j]) {
+                swap(&str[i], &str[j]);
+            }
+        }
+    }
+}
+
+// Function to find next lexicographical permutation
+int nextPermutation(char *str) {
+    int i = strlen(str) - 2;
+    while (i >= 0 && str[i] >= str[i + 1])
+        i--;
+
+    if (i < 0) return 0;  // No next permutation
+
+    int j = strlen(str) - 1;
+    while (str[j] <= str[i])
+        j--;
+
+    swap(&str[i], &str[j]);
+
+    // Reverse the suffix
+    int left = i + 1, right = strlen(str) - 1;
+    while (left < right)
+        swap(&str[left++], &str[right--]);
+
+    return 1;
+}
+
+int main() {
+    char *s;
+    int n;
+
+    // Input string length
+    printf("Enter the length of string: ");
+    scanf("%d", &n);
+
+    // Dynamic memory allocation
+    s = (char *)malloc((n + 1) * sizeof(char));
+
+    if (s == NULL) {
+        printf("Memory allocation failed.\n");
+        return 1;
+    }
+
+    // Input string
+    printf("Enter the string: ");
+    scanf("%s", s);
+
+    // Step 1: Sort to start with lexicographically smallest permutation
+    sortString(s);
+
+    // Step 2: Print all permutations in lexicographical order
+    printf("\nAll permutations in lexicographical order:\n");
+    do {
+        printf("%s\n", s);
+    } while (nextPermutation(s));
+
+    // Step 3: Free memory
+    free(s);
+
+    return 0;
+}
+
+```
 ## Output:
+<img width="537" height="337" alt="image" src="https://github.com/user-attachments/assets/d232fb19-d264-4b87-be92-0d4175446635" />
 
-//paste your output here
 
 ## Result:
 Thus, the program is verified successfully
@@ -88,12 +236,47 @@ Matrix Generation Loop
 Calculate min as the minimum distance to the borders
 End
 ## Program:
+```
+#include <stdio.h>
 
-//type your code here
+int main() {
+    int n, i, j, min, len;
+
+    // Input from user
+    printf("Enter the value of n: ");
+    scanf("%d", &n);
+
+    // Calculate matrix size
+    len = n * 2 - 1;
+
+    // Generate the pattern
+    for (i = 0; i < len; i++) {
+        for (j = 0; j < len; j++) {
+            // Calculate the minimum distance to any border
+            int top = i;
+            int left = j;
+            int right = len - 1 - j;
+            int bottom = len - 1 - i;
+
+            min = top;
+            if (left < min) min = left;
+            if (right < min) min = right;
+            if (bottom < min) min = bottom;
+
+            // Print pattern value
+            printf("%d ", n - min);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
 
 ## Output:
+<img width="615" height="347" alt="image" src="https://github.com/user-attachments/assets/dfb48b37-39ff-4cae-a9ca-3a14d9dcc0da" />
 
-//paste your output here
 
  ## Result:
  Thus, the program is verified successfully
@@ -112,12 +295,35 @@ Inside the function: o Declare an integer variable to store the number. o Ask th
 In the main function: o Call the square() function and display the result.
 End.
 ## Program:
+```
+#include <stdio.h>
 
-//type your code here
+// Function definition (no arguments, returns an integer)
+int square() {
+    int num, sq;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    sq = num * num;   // calculate square
+    return sq;        // return result
+}
+
+int main() {
+    int result;
+
+    // Call the function and store the return value
+    result = square();
+
+    // Display the result
+    printf("Square of the given number is: %d\n", result);
+
+    return 0;
+}
+```
 
  ## Output:
 
-//paste your output here
+<img width="525" height="212" alt="image" src="https://github.com/user-attachments/assets/83719317-cdf1-4d2e-ae11-26d95a70187e" />
+
 
 ## Result: 
 Thus, the program is verified successfully
